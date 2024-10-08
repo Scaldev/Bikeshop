@@ -1,0 +1,15 @@
+{
+    "inventory": {
+        "000001": ["100", "101", "102", "103", "104"],
+        "000002": ["110", "111", "112"],
+        "000003": [],
+        "000004": ["250", "251", "252", "253", "254", "255", "256", "257", "258"]
+    },
+    
+    "bikes": {
+        "aB81bd": ["Vélo Swag", "Le meilleur au monde", "Blabla blablabla blabla"],
+        "cP8epD": ["Vélo Très Bg", "Je suis : amoureux", "Blabla blablabla bla blabla"],
+        "9aNUeR": ["Vélo Rapide 2000", "mmmmmiouuu ça va vite", "Blabla blablabla bla blabla"],
+        "PEn01L": ["Vélo Vraiment Nul", "N'achetez pas ce truc", "Blabla blablabla bla blabla"]
+    }
+}
