@@ -5,14 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .count {
+            margin-left: 20px;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 
 <body>
     QUE ceux dispos :
     <ul>
-        {% for element in dispos %}
-        <li> blabla : {{ element }} </li>
-        {% endfor %}
+
+        <ul>
+            {% for element in dispos %}
+                <li> blabla : {{ element }} </li>
+                <div class="container">
+                    <!-- Le bouton redirige vers la page 'velo' avec le paramètre 'element' -->
+                    <button class="button" onclick="window.location.href='velo?c={{ element[0] }}';">Voir plus</button>
+                </div>
+            {% endfor %}
+        </ul>
+        
     </ul>
 </body>
 

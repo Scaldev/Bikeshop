@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .count {
+            margin-left: 20px;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    Le velo goatesque : {{ velo_data }}
-    Est-il dispo : {{ est_dispo }}
+    {% if is_available %}
+        <li style="color: black;">    Le velo goatesque : {{ bike_data }}</li>
+        <button class="button" onclick="window.location.href='/achat?c={{ code }}';">acheter</button>
+
+    {% else %}
+        <li style="color: red;">     Le velo goatesque : {{ bike_data }}     
+        </li>
+    {% endif %}
 </body>
 </html>
+</head>

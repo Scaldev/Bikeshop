@@ -10,9 +10,16 @@
 <body>
     Tout tout et tout :
     <ul>
-        {% for element in tout %}
-        <li> blabla : {{ element }} </li>
-        {% endfor %}
+    {% for bike in bikes %}
+        {% if bike in dispos %}
+            <li style="color: black;"> blabla : {{ bike }} </li>
+
+        {% else %}
+            <li style="color: red;"> blabla : {{ bike }} </li>
+        {% endif %}
+        <button class="button" onclick="window.location.href='velo?c={{ bike[0] }}';">Voir plus</button>
+
+    {% endfor %}
     </ul>
 </body>
 

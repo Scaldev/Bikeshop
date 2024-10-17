@@ -6,23 +6,53 @@ TEMPLATES = "templates"
 
 app = Flask(__name__, template_folder=TEMPLATES)
 
+# UTILITY
+
+def is_page_found(page_name):
+    file_absolution_path = os.path.join("app", TEMPLATES, page_name + ".html")
+    if not os.path.exists(file_absolution_path):
+        return abort(404)
+
+# ROUTES
+
 @app.route("/")
 @app.route("/home")
 def hello():
+    print(app.template_folder)
     return render_template("index.html")
 
-@app.route('/<path:page_name>')
-def show_page(page_name):
-    file_absolution_path = os.path.join("app", TEMPLATES, page_name + ".html")
-    if not os.path.exists(file_absolution_path):
-        abort(404)
-    return page_manager(page_name)
+@app.route('/tout')
+def tout():
+    is_page_found("tout")
+    bikes = BikeManager.get_bikes()
+    dispos = BikeManager.get_available_bikes()
+    return render_template("tout.html", bikes=bikes, dispos=dispos)
 
-def page_manager(page_name):
-    if page_name == "tout":
-        return render_template("tout.html", tout = BikeManager.get_bikes())
-    if page_name == "dispos":
-        return render_template("dispos.html", dispos=BikeManager.get_available_bikes())
-    if page_name == "velo":
-        code = request.args.get('c', default = "", type = str)
-        return render_template("velo.html", velo_data=BikeManager.get_bike_data(code), est_dispo=BikeManager.is_available(code))
+@app.route('/dispos')
+def dispos():
+    is_page_found("dispos")
+    dispos = BikeManager.get_available_bikes()
+    return render_template("dispos.html", dispos=dispos)
+
+@app.route('/velo')
+def velo():
+    is_page_found("velo")
+    code = request.args.get('c', default="", type=str)
+    bike_data = BikeManager.get_bike_data(code)
+    is_available = BikeManager.is_available(code)
+    return render_template("velo.html", bike_data=bike_data, is_available=is_available, code=code)
+
+@app.route('/achat', methods = ["GET", "POST"])
+def achat():
+    
+    code = request.args.get('c', default="", type=str)
+    if request.method == "GET":
+        return render_template("achat.html", code=code)
+    
+    elif request.method == "POST":
+        form = request.form
+        # TODO : envoyer les informations au côté API
+
+        # TODO : renvoyer sur une page de confirmation
+        dispos = BikeManager.get_available_bikes()
+        return render_template("dispos.html", dispos=dispos)
