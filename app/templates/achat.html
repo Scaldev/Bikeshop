@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Achat</h2>
+    {% if is_available %}
     <form action="/achat" method="post">
         <!-- Champ de texte -->
         <label for="nom">Nom :</label>
@@ -28,8 +29,14 @@
         <label for="postal">Code postal :</label>
         <input type="postal" id="postal" name="postal" placeholder="Entrez votre code postal" required><br><br>
 
+        <input type="hidden" name="code" value="{{ code }}">
         <!-- Bouton de soumission -->
         <input type="submit" value="Acheter">
     </form>
+
+    {% else %}
+        <li style="color: red;"> Le vélo n'existe pas ou n'est pas disponible.</li>
+    {% endif %}
+    
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Le Bibi-Shosho</title>
+</head>
+<body>
+    <h2>Confirmation d'achat</h2>
+    
+    <p>Nom : {{form['nom']}}</p>
+    <p>E-mail : {{form['email']}}</p>
+    <p>Adresse : {{form['adresse']}}</p>
+    <p>Ville : {{form['ville']}}</p>
+    <p>Code postal : {{form['postal']}}</p>
+
+    <p>Vous avez acheté {{bike_data[0]}} le {{date}}</p>
+
+    <button class="button" onclick="window.location.href='home';">retour à l'accueil</button>
+
+</body>
+</html>

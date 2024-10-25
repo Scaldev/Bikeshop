@@ -1,14 +1,38 @@
 {
     "Inventaire": {
-        "kQ94bE": ["300", "301"],
-        "mX92tF": ["310", "311", "312", "313"],
+        "kQ94bE": [],
+        "mX92tF": [
+            "310",
+            "311",
+            "312",
+            "313"
+        ],
         "nP23sW": [],
-        "jR72gH": ["400", "401", "402"],
-        "uW57dQ": ["410"],
-        "xF84nY": ["420", "421", "422"],
+        "jR72gH": [
+            "400",
+            "401",
+            "402"
+        ],
+        "uW57dQ": [
+            "410"
+        ],
+        "xF84nY": [
+            "420",
+            "421",
+            "422"
+        ],
         "vB67lZ": [],
-        "sT45rC": ["430", "431"],
-        "pM73eD": ["500", "501", "502", "503", "504"],
+        "sT45rC": [
+            "430",
+            "431"
+        ],
+        "pM73eD": [
+            "500",
+            "501",
+            "502",
+            "503",
+            "504"
+        ],
         "qN96vB": [],
         "oY84kL": [],
         "wD37eF": [],
@@ -18,27 +42,107 @@
         "yM45wS": [],
         "iN29gF": []
     },
-    
     "Description": {
-        "kQ94bE": ["Le Titan du Montagne", "Prêt pour les sommets !", "Conçu pour affronter les sentiers les plus rudes avec une suspension robuste."],
-        "mX92tF": ["La Flèche d'Argent", "Ultra-léger et rapide", "Une vitesse incomparable grâce à son cadre en aluminium aérodynamique."],
-        "nP23sW": ["Éclair Urbain", "Parfait pour la ville", "Maniabilité extrême, idéal pour les trajets quotidiens en milieu urbain."],
-        "jR72gH": ["Cyclone Carbone", "Performance inégalée", "Fait en fibre de carbone pour une résistance et une légèreté optimales."],
-        "uW57dQ": ["Le Confort Plus", "Longues balades, zéro fatigue", "Selle ergonomique et poignées souples, idéal pour les randonnées."],
-        "xF84nY": ["VTT Super Héros", "Force et contrôle", "Résistant et fiable, conçu pour les terrains accidentés."],
-        "vB67lZ": ["Le Coursier Express", "Livraisons sans effort", "Un vélo de ville rapide et efficace pour les courses quotidiennes."],
-        "sT45rC": ["L'Explorateur", "Aventures sans fin", "Cadre robuste et roues larges, parfait pour les randonnées hors des sentiers battus."],
-        "pM73eD": ["Turbo Race X", "Compétition à grande vitesse", "Conçu pour la course, ce vélo atteint des vitesses impressionnantes."],
-        "qN96vB": ["La Bête Noire", "Lourd mais puissant", "Un vélo robuste pour ceux qui préfèrent la stabilité et la puissance à la légèreté."],
-        "oY84kL": ["Green Voyager", "Écologique et silencieux", "Fabriqué à partir de matériaux recyclés et équipé d'un moteur électrique silencieux."],
-        "wD37eF": ["L'Éclaireur Nocturne", "Visibilité maximale", "Equipé de lumières LED ultra-puissantes pour les balades nocturnes."],
-        "zP41mR": ["Vélo Nomade", "Pliable et pratique", "Facilement transportable, ce vélo pliant est parfait pour les déplacements en ville."],
-        "gR82yK": ["L'Ultra Endurance", "Pour les longues distances", "Conçu pour résister aux longues balades avec une autonomie incroyable."],
-        "tL96jV": ["Le Petit Malin", "Compact et astucieux", "Un vélo compact mais solide, idéal pour les espaces restreints et les petits trajets."],
-        "yM45wS": ["Le Faucon", "Vitesse et agilité", "Conçu pour les cyclistes qui recherchent un contrôle précis à haute vitesse."],
-        "iN29gF": ["L'Asphalte King", "Dominez les routes", "Spécialement conçu pour le cyclisme de route, avec un cadre aérodynamique et des pneus lisses."]
+        "kQ94bE": [
+            "Le Titan du Montagne",
+            "Pr\u00eat pour les sommets !",
+            "Con\u00e7u pour affronter les sentiers les plus rudes avec une suspension robuste."
+        ],
+        "mX92tF": [
+            "La Fl\u00e8che d'Argent",
+            "Ultra-l\u00e9ger et rapide",
+            "Une vitesse incomparable gr\u00e2ce \u00e0 son cadre en aluminium a\u00e9rodynamique."
+        ],
+        "nP23sW": [
+            "\u00c9clair Urbain",
+            "Parfait pour la ville",
+            "Maniabilit\u00e9 extr\u00eame, id\u00e9al pour les trajets quotidiens en milieu urbain."
+        ],
+        "jR72gH": [
+            "Cyclone Carbone",
+            "Performance in\u00e9gal\u00e9e",
+            "Fait en fibre de carbone pour une r\u00e9sistance et une l\u00e9g\u00e8ret\u00e9 optimales."
+        ],
+        "uW57dQ": [
+            "Le Confort Plus",
+            "Longues balades, z\u00e9ro fatigue",
+            "Selle ergonomique et poign\u00e9es souples, id\u00e9al pour les randonn\u00e9es."
+        ],
+        "xF84nY": [
+            "VTT Super H\u00e9ros",
+            "Force et contr\u00f4le",
+            "R\u00e9sistant et fiable, con\u00e7u pour les terrains accident\u00e9s."
+        ],
+        "vB67lZ": [
+            "Le Coursier Express",
+            "Livraisons sans effort",
+            "Un v\u00e9lo de ville rapide et efficace pour les courses quotidiennes."
+        ],
+        "sT45rC": [
+            "L'Explorateur",
+            "Aventures sans fin",
+            "Cadre robuste et roues larges, parfait pour les randonn\u00e9es hors des sentiers battus."
+        ],
+        "pM73eD": [
+            "Turbo Race X",
+            "Comp\u00e9tition \u00e0 grande vitesse",
+            "Con\u00e7u pour la course, ce v\u00e9lo atteint des vitesses impressionnantes."
+        ],
+        "qN96vB": [
+            "La B\u00eate Noire",
+            "Lourd mais puissant",
+            "Un v\u00e9lo robuste pour ceux qui pr\u00e9f\u00e8rent la stabilit\u00e9 et la puissance \u00e0 la l\u00e9g\u00e8ret\u00e9."
+        ],
+        "oY84kL": [
+            "Green Voyager",
+            "\u00c9cologique et silencieux",
+            "Fabriqu\u00e9 \u00e0 partir de mat\u00e9riaux recycl\u00e9s et \u00e9quip\u00e9 d'un moteur \u00e9lectrique silencieux."
+        ],
+        "wD37eF": [
+            "L'\u00c9claireur Nocturne",
+            "Visibilit\u00e9 maximale",
+            "Equip\u00e9 de lumi\u00e8res LED ultra-puissantes pour les balades nocturnes."
+        ],
+        "zP41mR": [
+            "V\u00e9lo Nomade",
+            "Pliable et pratique",
+            "Facilement transportable, ce v\u00e9lo pliant est parfait pour les d\u00e9placements en ville."
+        ],
+        "gR82yK": [
+            "L'Ultra Endurance",
+            "Pour les longues distances",
+            "Con\u00e7u pour r\u00e9sister aux longues balades avec une autonomie incroyable."
+        ],
+        "tL96jV": [
+            "Le Petit Malin",
+            "Compact et astucieux",
+            "Un v\u00e9lo compact mais solide, id\u00e9al pour les espaces restreints et les petits trajets."
+        ],
+        "yM45wS": [
+            "Le Faucon",
+            "Vitesse et agilit\u00e9",
+            "Con\u00e7u pour les cyclistes qui recherchent un contr\u00f4le pr\u00e9cis \u00e0 haute vitesse."
+        ],
+        "iN29gF": [
+            "L'Asphalte King",
+            "Dominez les routes",
+            "Sp\u00e9cialement con\u00e7u pour le cyclisme de route, avec un cadre a\u00e9rodynamique et des pneus lisses."
+        ]
     },
-    "Transactions": {
-        "1": ["Jean Dupont", "mX92tF", "21 rue des Fleurs, Rennes", "11/10/2024 11:45:31"]
-    }
+    "Transactions": [
+        {
+            "date": "10/25/2024, 16:14:55",
+            "code": "kQ94bE",
+            "email": "jean.paul@blabla.com",
+            "nom": "Jean Paul",
+            "adresse": "27 Rue des Fleurs, Rennes 35000"
+        },
+        {
+            "date": "10/25/2024, 16:20:40",
+            "code": "kQ94bE",
+            "email": "diane.lacon@gmail.com",
+            "nom": "Diane Lacon",
+            "adresse": "6 Boulevard des Caputes, Lyon 69000"
+        }
+    ]
 }
