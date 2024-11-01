@@ -1,22 +1,55 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=4, initial-scale=1.0">
-    <title>Le Bibi-Shosho</title>
-</head>
-<body>
+{% extends "./base.html" %}
+
+{% block title %}
+<title>Achat - {{ bike_name }} - Bibi-Shosho</title>
+{% endblock %}
+
+{% block content %}
+<section id="confirmation" class="section">
     <h2>Confirmation d'achat</h2>
-    
-    <p>Nom : {{form['nom']}}</p>
-    <p>E-mail : {{form['email']}}</p>
-    <p>Adresse : {{form['adresse']}}</p>
-    <p>Ville : {{form['ville']}}</p>
-    <p>Code postal : {{form['postal']}}</p>
+    Merci de votre achat ! Voici votre reçu. <br><br>
 
-    <p>Vous avez acheté {{bike_data[0]}} le {{date}}</p>
+    <table style="width: 30em; font-family: 'Courier New', Courier, monospace;">
+        <thread>
+            <tr>
+                <th scope="col">Champ</th>
+                <th scope="col">Valeur</th>
+            </tr>
+        </thread>
+        <tbody>
+            <tr>
+                <td><b>Nom</b></td>
+                <td>{{ form['nom'] }}</td>
+            </tr>
+            <tr>
+                <td><b>E-mail</b></td>
+                <td>{{ form['email'] }}</td>
+            </tr>
+            <tr>
+                <td><b>Adresse</b></td>
+                <td>{{ form['adresse'] }}</td>
+            </tr>
+            <tr>
+                <td><b>Ville</b></td>
+                <td>{{ form['ville'] }}</td>
+            </tr>
+            <tr>
+                <td><b>Code postal</b></td>
+                <td>{{ form['postal'] }}</td>
+            </tr>
+            <tr>
+                <td><b>Vélo</b></td>
+                <td>{{ bike_name }}</td>
+            </tr>
+            <tr>
+                <td><b>Date</b></td>
+                <td>{{ date }}</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <button class="button" onclick="window.location.href='home';">retour à l'accueil</button>
+    <br><br>
 
-</body>
-</html>
+    <button class="button" onclick="window.location.href='/'">Retourner à l'accueil</button>
+</section>
+{% endblock %}

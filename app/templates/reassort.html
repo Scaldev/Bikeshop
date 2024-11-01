@@ -1,0 +1,81 @@
+{% extends "./base.html" %}
+
+{% block title %}
+<title>Inventaire - Bibi-Shosho</title>
+{% endblock %}
+
+{% block content %}
+<section id="information" class="section">
+
+    <h2>Information générale</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de modèles dans le catalogue</th>
+                <th>Nombre de vélo à acheter au total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ modele }}</td>
+                <td>{{ exemplaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="inventaire" class="section">
+
+    <h2>Inventaire</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Description courte</th>
+                <th>Description longue</th>
+                <th>Photo</th>
+                <th>Quantité</th>
+                <th>Ajouter</th>
+                <th>Diminuer</th>
+                <th>Retirer</th>
+                <th>Remettre</th>
+                <th>Modifier</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bike in bikes %}
+            <tr>
+
+                <td style="font-family: 'Courier New', Courier, monospace;">{{ bike[0] }}</td>
+                <td><b>{{ bike[1] }}</b></td>
+                <td><i>{{ bike[2] }}</i></td>
+                <td>{{ bike[3] }}</td>
+                <td>image</td>
+
+                {% if bike in dispos %}
+                    <td class="isInStock">{{ stock[bike[0]] }}</td>
+                {% else %}
+                    <td class="isNotInStock">{{ stock[bike[0]] }}</td>
+                {% endif %}
+
+                <td><button class="button">➕</button></td>
+                <td><button class="button">➖</button></td>
+
+                {% if bike not in dispos %}
+                    <td><button class="button" action="/achat" method="post">⏸️</button></td>
+                    <td><button class="button" action="/achat" method="post">⏯️</button></td>
+                {% else %}
+                    <td></td>
+                    <td></td>
+                {% endif %}
+
+                <td><button class="button" onclick="window.location.href='modification?c={{ bike[0] }}'">✏️</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <button style="font-size: x-large" class="button" onclick="window.location.href='creer'">Ajouter un vélo dans le catalogue...</button>
+</section>
+{% endblock %}

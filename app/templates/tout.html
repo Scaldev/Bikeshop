@@ -1,26 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "./base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block title %}
+<title>Catalogue des vélos - Bibi-Shosho</title>
+{% endblock %}
 
-<body>
-    Tout tout et tout :
-    <ul>
-    {% for bike in bikes %}
-        {% if bike in dispos %}
-            <li style="color: black;"> blabla : {{ bike }} </li>
+{% block content %}
+<section id="catalogue" class="section">
+    <h2>Catalogue des vélos</h2>
 
-        {% else %}
-            <li style="color: red;"> blabla : {{ bike }} </li>
-        {% endif %}
-        <button class="button" onclick="window.location.href='velo?c={{ bike[0] }}';">Voir plus</button>
+    <p>Il y a actuellement <b>{{ amount }} vélos</b> différents dans le catalogue, dont <b>{{ amount_available }} vélos</b> disponibles.</p>
 
-    {% endfor %}
-    </ul>
-</body>
+    <div class="boxes">
+        {% for bike in bikes %}
 
-</html>
+                {% if bike in bikes_available %}
+                    <div class="isAvailable">
+                        <h4><b>{{ bike[1] }}</b></h4>
+                        <p><i>{{ bike[2] }}</i></p>
+                        <button class="button" onclick="window.location.href='velo?c={{ bike[0] }}'">Voir plus</button>
+                    </div>
+
+                {% else %}
+                    <div class="isNotAvailable">
+                        <h4><b>{{ bike[1] }} ❌</b></h4>
+                        <p><i>{{ bike[2] }}</i></p>
+                        <button class="button" onclick="window.location.href='velo?c={{ bike[0] }}'">Voir plus</button>
+                    </div>
+                {% endif %}
+
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}

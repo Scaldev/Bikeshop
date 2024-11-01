@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=4, initial-scale=1.0">
-    <title>Le Bibi-Shosho</title>
-</head>
-<body>
-    Tout ici : <a href="tout">l'inventaire complet</a>
-    <br>
-    Dispos ici : <a href="dispos">l'inventaire des vélos dispos</a>
-</body>
-</html>
+{% extends "./base.html" %}
+
+{% block title %}
+<title>Accueil - Bibi-Shosho</title>
+{% endblock %}
+
+{% block content %}
+<section id="about" class="section">
+    <h2>À propos de nous</h2>
+    <p>Bienvenue chez Bibi-Shosho</p>
+</section>
+{% endblock %}

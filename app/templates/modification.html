@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modification</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Le Bibi-Shosho</h1>
+    </header>
+
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="reassort">Inventaire</a>
+        <a href="tout">Catalogue</a>
+    </nav>
+
+    <section id="formulaire" class="section">
+        {% if existe %}
+            <h2>Modification de {{ code }} aka {{  data_bike[0] }}</h2>
+            <div class="exist">
+                <form action="/submit" method="post">
+                    <!-- Description Courte -->
+                    <label for="Courte">Description Courte :</label>
+                    <textarea id="Courte" name="Courte">{{ data_bike[1] }}</textarea><br><br>
+            
+                    <!-- Description Longue -->
+                    <label for="Longue">Description Longue :</label>
+                    <textarea id="Longue" name="Longue">{{ data_bike[2] }}</textarea><br><br>
+
+                    <!-- Photo -->
+                    <label for="photo">Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+                    
+                    <!-- Bouton de soumission -->
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        {% else %}
+            <div class="existPas">
+                <p>Le vélo n'existe pas</p>
+            </div>
+        {% endif %}            
+    </section>
+</body>
+
+</html>

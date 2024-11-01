@@ -1,46 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "./base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container {
-            display: flex;
-            align-items: center;
-            margin: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .count {
-            margin-left: 20px;
-            font-size: 1.2em;
-        }
-    </style>
-</head>
+{% block title %}
+<title>Vélos disponibles - Bibi-Shosho</title>
+{% endblock %}
 
-<body>
-    QUE ceux dispos :
-    <ul>
+{% block content %}
+<section id="disponible" class="section">
 
-        <ul>
-            {% for element in dispos %}
-                <li> blabla : {{ element }} </li>
-                <div class="container">
-                    <!-- Le bouton redirige vers la page 'velo' avec le paramètre 'element' -->
-                    <button class="button" onclick="window.location.href='velo?c={{ element[0] }}';">Voir plus</button>
-                </div>
-            {% endfor %}
-        </ul>
-        
-    </ul>
-</body>
+    <h2>Vélos disponibles</h2>
+    <p>Il y a actuellement <b>{{ amount_available }} vélos</b> différents disponibles.</p>
+    <div class="boxes">
 
-</html>
+        {% for bike in bikes_available %}
+            <div class="isAvailable">
+                <h4><b>{{ bike[1] }}</b></h4>
+                <p><i>{{ bike[2] }}</i></p>
+                <button class="button" onclick="window.location.href='velo?c={{ bike[0] }}'">Voir plus</button>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+{% endblock %}

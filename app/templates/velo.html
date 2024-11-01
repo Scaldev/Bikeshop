@@ -1,39 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends "./base.html" %}
 
-    <style>
-        .container {
-            display: flex;
-            align-items: center;
-            margin: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .count {
-            margin-left: 20px;
-            font-size: 1.2em;
-        }
-    </style>
-</head>
-<body>
+{% block title %}
+<title>Vélo - {{ bike_description[0] }} - Bibi-Shosho</title>
+{% endblock %}
+
+{% block content %}
+<section id="presentation" class="section">
+
+    <h2>{{ bike_description[0] }}</h2>
+
+    <p>
+        <i>{{ bike_description[1] }}</i>
+        <br><br>
+        <b>Description : </b> {{ bike_description[2] }}
+        <br>
+    </p>
+
     {% if is_available %}
-        <li style="color: black;">    Le velo goatesque : {{ bike_data }}</li>
-        <button class="button" onclick="window.location.href='/achat?c={{ code }}';">acheter</button>
-
+        <p><button class="button" onclick="window.location.href='/achat?c={{ bike_id }}'">Acheter</button></p>
     {% else %}
-        <li style="color: red;">     Le velo goatesque : {{ bike_data }}     
-        </li>
+        <p style="color: rgb(136, 21, 21)">Ce produit n'est pas disponible.</p>
     {% endif %}
-</body>
-</html>
-</head>
+
+</section>
+{% endblock %}

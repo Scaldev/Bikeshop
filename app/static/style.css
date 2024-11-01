@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+p {
+    font-size: large;
+}
+
+.creer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.erreur {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 7px 15px;
+    background-color: #7c7c7c;
+    color: white;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.catalogue {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.isAvailable {
+    background-color: #99b2dd;
+    border: 1px solid #13253f;
+    width:16em;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.isNotAvailable {
+    background-color: #e4e8ec;
+    border: 1px solid #13253f;
+    width:16em;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.exist {
+    background-color: #d1d1d1;
+    border: 1px solid #6b6b6b;
+    border-radius: 5px;
+    padding: 20px;
+}
+.existPas {
+    background-color: #dd7979;
+    border: 1px solid #300e0e;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.confirmation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* REASSORT */
+
+.inventaire {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+td:hover {
+    background-color: #e6f0f5;
+}
+td { 
+    color: #333; 
+}
+
+.isInStock {
+    background-color: #2157bb9a;
+    font-weight: bold;
+}
+
+.isNotInStock {
+    background-color: #d82020a2;
+    font-weight: bold;
+}
